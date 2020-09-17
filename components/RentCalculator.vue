@@ -3,17 +3,15 @@
         <v-form ref="form">
             <v-row>
                 <v-col cols='12' md='8'>
-                    <v-text-field type="text" v-model="price" label="価格" @input='calculate(price,area)' required>
-                    </v-text-field>
+                    <v-text-field type="text" v-model="price" label="価格" @input='calculate(price,area)' required></v-text-field>
                 </v-col>
-                <v-col cols=' 12' md='4'>
-                    <p>万円</p>
+                <v-col cols='12' md='4'>
+                    <p>円</p>
                 </v-col>
             </v-row>
             <v-row>
                 <v-col cols='12' md='8'>
-                    <v-text-field type="text" v-model="area" label="延床面積" @input='calculate(price,area)' required>
-                    </v-text-field>
+                    <v-text-field type="text" v-model="area" label="延床面積" @input='calculate(price,area)' required></v-text-field>
                 </v-col>
                 <v-col cols='12' md='4'>
                     <p>㎡</p>
@@ -21,7 +19,7 @@
             </v-row>
             <v-btn class='d-flex flex-row' color="light-blue lighten-5" @click='clear'>reset</v-btn>
         </v-form>
-        <p class='headline'>坪単価：{{ data.unitPrice }}万円</p>
+        <p class='headline'>坪単価：{{ data.unitPrice }}円</p>
     </section>
 </template>
 
@@ -44,7 +42,7 @@
             clear() {
                 this.$refs.form.reset()
                 this.data.unitPrice = ''
-            },
+            }
         }
     })
 </script>

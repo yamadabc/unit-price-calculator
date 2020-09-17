@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class='display-1'>坪単価計算</h1>
+    <h1 class='display-1'>坪単価計算表</h1>
     <v-container>
       <h2 class='headline'>売買</h2>
       <v-card outlined>
@@ -29,17 +29,17 @@
         <v-row>
           <v-col cols='12' md='4'>
             <v-card-text>
-              <calculator></calculator>
+              <rentCalculator></rentCalculator>
             </v-card-text>
           </v-col>
           <v-col cols='12' md='4'>
             <v-card-text>
             </v-card-text>
-            <calculator></calculator>
+            <rentCalculator></rentCalculator>
           </v-col>
           <v-col cols='12' md='4'>
             <v-card-text>
-              <calculator></calculator>
+              <rentCalculator></rentCalculator>
             </v-card-text>
           </v-col>
         </v-row>
@@ -51,10 +51,12 @@
 <script>
   import Vue from 'vue'
   import calculator from '~/components/Calculator.vue'
+  import rentCalculator from '~/components/RentCalculator.vue'
 
   export default Vue.extend({
     components: {
-      calculator
+      calculator,
+      rentCalculator
     },
     data: function () {
       return {
