@@ -33,6 +33,11 @@ export default {
       rightDrawer: false,
       title: '坪単価計算'
     }
+  },
+  head(){
+    return{
+      title:'坪単価計算表'
+    }
   }
 }
 </script>
