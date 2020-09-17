@@ -1,9 +1,32 @@
 <template>
     <section>
-        <p><input type="text" v-model="price" placeholder="価格" />万円</p>
-        <p><input type="text" v-model="area" placeholder="延床面積" />㎡</p>
-        <button @click='calculate(price,area)'>go!</button>
-        <p>坪単価：{{ data.unitPrice }}万円</p>
+        <v-form ref="form">
+            <v-row>
+                <v-col cols='12' md='8'>
+                    <v-text-field type="text" v-model="price" label="価格" required></v-text-field>
+                </v-col>
+                <v-col cols='12' md='4'>
+                    <p>万円</p>
+                </v-col>
+            </v-row>
+            <v-row>
+                <v-col cols='12' md='8'>
+                    <v-text-field type="text" v-model="area" label="延床面積" required></v-text-field>
+                </v-col>
+                <v-col cols='12' md='4'>
+                    <p>㎡</p>
+                </v-col>
+            </v-row>
+            <v-row>
+                <v-col cols='12' md='2'>
+                    <v-btn class='d-flex flex-row' color="cyan lighten-2" @click='calculate(price,area)'>go!</v-btn>
+                </v-col>
+                <v-col cols='12' md='2'>
+                    <v-btn class='d-flex flex-row' color="light-blue lighten-5" @click='clear'>reset</v-btn>
+                </v-col>
+            </v-row>
+        </v-form>
+        <p class='headline'>坪単価：{{ data.unitPrice }}万円</p>
     </section>
 </template>
 
@@ -23,6 +46,15 @@
             calculate(price, area) {
                 this.data.unitPrice = Math.round(price / (area / 3.30578));
             },
+            clear() {
+                this.$refs.form.reset()
+                this.data.unitPrice = ''
+            }
         }
     })
 </script>
+<style>
+    p {
+        padding: 0;
+    }
+</style>
