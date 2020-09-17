@@ -17,9 +17,15 @@
                     <p>㎡</p>
                 </v-col>
             </v-row>
-            <v-btn class='d-flex flex-row' color="light-blue lighten-5" @click='clear'>reset</v-btn>
+            <v-row>
+                <v-col cols='12' md='6'>
+                    <p class='headline'>坪単価：{{ data.unitPrice }}円</p>
+                </v-col>
+                <v-col cols='12' md='6'>
+                    <v-btn class='button' color="light-blue lighten-5" @click='clear'>reset</v-btn>
+                </v-col>
+            </v-row>
         </v-form>
-        <p class='headline'>坪単価：{{ data.unitPrice }}円</p>
     </section>
 </template>
 
@@ -47,7 +53,10 @@
     })
 </script>
 <style>
-    p {
+    p{
+        margin-top:1.5rem;
+    }
+   .button {
         margin-top: 1rem;
     }
 </style>
