@@ -2,8 +2,8 @@
   <div>
     <h1 class='display-1'>坪単価計算表</h1>
     <v-container>
-      <h2 class='headline'>売買</h2>
       <v-card outlined>
+        <v-toolbar class='headline' color='green darken-2' dark>売買</v-toolbar>
         <v-row>
           <v-col cols='12' md='4'>
             <v-card-text>
@@ -24,8 +24,8 @@
       </v-card>
     </v-container>
     <v-container>
-      <h2 class='headline'>賃貸</h2>
       <v-card outlined>
+        <v-toolbar class='headline' color='blue-grey' dark>賃貸</v-toolbar>
         <v-row>
           <v-col cols='12' md='4'>
             <v-card-text>
