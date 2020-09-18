@@ -35,8 +35,8 @@
           </v-col>
           <v-col cols='12' md='4'>
             <v-card-text>
+              <rentCalculator></rentCalculator>
             </v-card-text>
-            <rentCalculator></rentCalculator>
           </v-col>
           <v-col cols='12' md='4'>
             <v-card-text>

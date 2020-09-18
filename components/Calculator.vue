@@ -2,29 +2,29 @@
     <section>
         <v-form ref="form">
             <v-row>
-                <v-col cols='12' md='8'>
+                <v-col md='8'>
                     <v-text-field v-model="data.price" label="価格" @input='calculate(data.price,area)' required>
                     </v-text-field>
                 </v-col>
-                <v-col cols=' 12' md='4'>
+                <v-col md='4'>
                     <p>万円</p>
                 </v-col>
             </v-row>
             <v-row>
-                <v-col cols='12' md='8'>
+                <v-col md='8'>
                     <v-text-field v-model="area" label="延床面積" @input='calculate(data.price,area)' required>
                     </v-text-field>
                 </v-col>
-                <v-col cols='12' md='4'>
+                <v-col md='4'>
                     <p>㎡</p>
                 </v-col>
             </v-row>
             <v-row>
-                <v-col cols='12' md='8'>
+                <v-col md='8'>
                     <v-text-field v-model="data.unitPrice" label="坪単価" @input='calculatePrice(area,data.unitPrice)'>
                     </v-text-field>
                 </v-col>
-                <v-col cols='12' md='4'>
+                <v-col md='4'>
                     <p>万円</p>
                     <v-btn class='button' color="light-blue lighten-5" @click='clear'>reset</v-btn>
                 </v-col>
