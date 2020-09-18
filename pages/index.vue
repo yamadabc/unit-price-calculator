@@ -23,6 +23,7 @@
         </v-row>
       </v-card>
     </v-container>
+
     <v-container>
       <v-card outlined>
         <v-toolbar class='headline' color='blue-grey' dark>賃貸</v-toolbar>
