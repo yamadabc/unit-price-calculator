@@ -4,7 +4,7 @@
     <v-container>
       <v-card outlined>
         <v-toolbar class='headline' color='green darken-2' dark>売買</v-toolbar>
-        <v-row>
+        <v-row v-if="!$vuetify.breakpoint.xs">
           <v-col cols='12' md='4'>
             <v-card-text>
               <calculator></calculator>
@@ -21,13 +21,18 @@
             </v-card-text>
           </v-col>
         </v-row>
+        <v-col cols='12' md='4' v-else>
+          <v-card-text>
+            <calculator></calculator>
+          </v-card-text>
+        </v-col>
       </v-card>
     </v-container>
 
     <v-container>
       <v-card outlined>
         <v-toolbar class='headline' color='blue-grey' dark>賃貸</v-toolbar>
-        <v-row>
+        <v-row v-if="!$vuetify.breakpoint.xs">
           <v-col cols='12' md='4'>
             <v-card-text>
               <rentCalculator></rentCalculator>
@@ -44,6 +49,11 @@
             </v-card-text>
           </v-col>
         </v-row>
+        <v-col cols='12' md='4' v-else>
+          <v-card-text>
+            <rentCalculator></rentCalculator>
+          </v-card-text>
+        </v-col>
       </v-card>
     </v-container>
   </div>
@@ -70,3 +80,8 @@
     },
   })
 </script>
+<style>
+  summary {
+    margin-left: 1rem;
+  }
+</style>
